@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CRM for sports school with group and training management</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="https://kit.fontawesome.com/12b11a9f58.js" crossorigin="anonymous"></script>
+  <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+</head>
+<body>
+<header class="header">
+  <nav class="navigation">
+    <a href="#">About us</a>
+    <a href="#">Groups</a>
+    <a href="#">Teachers</a>
+    <a href="#">Schedule</a>
+    <a href="#">Pricing</a>
+    <a href="#">Contacts</a>
+    <a href="#">Registrate</a>
+  </nav>
+  <div class="lds-ripple"><div></div><div></div></div>
+</header>
+
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="content/image4.png" alt=""></div>
+    <div class="swiper-slide"><img src="content/image1.jpeg" alt=""></div>
+    <div class="swiper-slide"><img src="content/image2.jpeg" alt=""></div>
+    <div class="swiper-slide"><img src="content/image3.jpeg" alt=""></div>
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+<div class="main-content">
+  <div class="registration-form">
+  <form>
+    <datalist id="kind-sport">
+      <option value="Football"></option>
+      <option value="Volleyball"></option>
+      <option value="Basketball"></option>
+      <option value="Hockey"></option>
+      <option value="Athletics"></option>
+    </datalist>
+
+    <label>
+      <input  type="text" name="name" placeholder="Name">
+    </label>
+    <label>
+      <input type="text" name="last-name" placeholder="Last name">
+    </label>
+    <label>
+      <input type="number" name="day" placeholder="Birthday">
+    </label>
+    <label>
+      <input type="text" name="month" placeholder="Month">
+    </label>
+    <label>
+      <input type="number" name="age" placeholder="Age">
+    </label>
+    <label>
+      <input type="text" name="sport" list="kind-sport" placeholder="Kind of sport">
+    </label>
+    <input type="submit" value="REGISTRATION">
+  </form>
+  </div>
+  <div class="about-us">
+  <!-- Тут ви можете додати вміст для блоку "About Us" -->
+  <h2>About Us</h2>
+  <p>At our sports school, we're dedicated to nurturing the next generation of athletes and providing a
+    holistic approach to sports education. Whether your passion lies in soccer, volleyball, basketball, hockey, or athletics
+    , we offer comprehensive training programs that cater to various sports disciplines.</p>
+
+  <p>We offer programs for athletes of all ages and skill levels. Whether you're a young aspiring athlete looking to get started or a seasoned player aiming to reach the professional level,
+    we have a program tailored just for you. Our curriculum includes skill development, tactical training, physical conditioning, and mental resilience.</p>
+
+
+    <p>If you're ready to embark on a journey of athletic excellence and personal growth, we invite you to join our sports school.
+      Please fill the registration form. Contact us to learn more about our programs and enrollment options. Our experienced coaching staff comprises former athletes and seasoned professionals.</p>
+
+  </div>
+</div>
+
+
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    mousewheel: true,
+    keyboard: true,
+  });
+
+</script>
+
+<footer>
+  <a href="mailto:vadimsodolinskij@gmail.com"><i class="fa-solid fa-envelope fa-5x" style="color: #86040b;"></i></a>
+  <a href="tel:+380977447508"><i class="fa-solid fa-phone fa-5x" style="color: #17191c;"></i></a>
+  <a href="https://t.me/DeepStateUA"><i class="fa-brands fa-telegram fa-5x" style="color: #124191;"></i></a>
+  <a href="https://wa.me/0977447508"><i class="fa-brands fa-whatsapp fa-5x" style="color: #1c7703;"></i></a>
+</footer>
+
+</body>
+</html>
