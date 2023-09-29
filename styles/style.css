@@ -262,6 +262,9 @@ i:hover{
     .mobile-footer{
         display: block;
     }
+    .main-content{
+        display: block;
+    }
 }
 
 
