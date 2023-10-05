@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="styles/style_register.css">
+</head>
+<body>
+<header class="header">
+    <div class="stripe"></div>
+    <nav class="navigation">
+        <a href="index.html">About us</a>
+        <a href="login.html">Authentication</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contacts.html">Contacts</a>
+        <a href="#">Pricing</a>
+        <a href="#">Apply now</a>
+    </nav>
+</header>
+<h2>Registration</h2>
+<div class="registration-form">
+    <form action="index.html" method="POST">
+        <datalist id="kind-sport">
+            <option value="Football"></option>
+            <option value="Volleyball"></option>
+            <option value="Basketball"></option>
+            <option value="Hockey"></option>
+            <option value="Athletics"></option>
+        </datalist>
+
+        <input type="text" name="enter email" placeholder="Email">
+        <input type="text" name="enter name" placeholder="Name">
+        <input type="text" name="enter last name" placeholder="Last name">
+        <input type="text" name="enter patronymic" placeholder="Patronymic">
+        <input type="date" name="enter birthday" placeholder="Birthday">
+        <input type="number" name="age" placeholder="Age">
+        <input type="text" name="sport" list="kind-sport" placeholder="Kind of sport">
+        <input type="file" id="file" name="file" accept=".pdf, .doc, .docx">
+        <input type="submit" value="REGISTER">
+    </form>
+</div>
+</body>
+</html>
