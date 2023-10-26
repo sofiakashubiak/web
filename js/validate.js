@@ -119,6 +119,8 @@ function checkInput(){
             document.getElementById("registerButton").disabled = false;
             document.getElementById("registerButton").background = "#030303";
         }
+
+
     }
 
 }

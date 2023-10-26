@@ -10,6 +10,7 @@ function createRow(){
     const inputEmail = document.querySelector("#email");
     const inputKindSport = document.querySelector("#sport");
     const inputPhone = document.querySelector("#phone");
+    const inputFile = document.querySelector("#file");
 
     const genderRadios = document.querySelectorAll('input[type="radio"][name="gender"]');
 
@@ -63,6 +64,16 @@ function createRow(){
 
     createdRow.appendChild(checkboxTD);
 
+    inputName.value = "";
+    inputLastName.value = "";
+    inputPatronymic.value = "";
+    inputBirthday.value = "";
+    inputAge.value = "";
+    inputEmail.value = "";
+    inputKindSport.value = "";
+    inputPhone.value = "";
+    inputFile.value = "";
+
     tableUsers.appendChild(createdRow);
 }
 
@@ -92,3 +103,4 @@ function dublicateRow(){
         }
     });
 }
+
