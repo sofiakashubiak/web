@@ -2,8 +2,6 @@
 
 * {
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     outline: none;
@@ -27,16 +25,6 @@ h2 {
     text-transform: uppercase;
     text-align: center;
     margin: 40px;
-}
-
-body {
-    background: white;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
 }
 
 section {
@@ -95,7 +83,9 @@ section {
 
 
 .registration-form input[type="text"],
+.registration-form input[type="tel"],
 .registration-form input[type="number"],
+.registration-form input[type="email"],
 .registration-form input[type="date"] {
     padding: 10px;
     border: 1px solid #ccc;
@@ -109,26 +99,11 @@ section {
 
 .registration-form input[type="text"]:focus,
 .registration-form input[type="number"]:focus,
+.registration-form input[type="email"],
 .registration-form input[type="date"]:focus {
-    border: 1px solid #000;
+    border: 4px solid #000;
 }
 
-.registration-form input[type="submit"] {
-    background-color: black;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s ease;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.registration-form input[type="submit"]:hover {
-    background-color: rgba(224, 216, 255, 0.99);
-}
 
 .registration-form input[type="date"]::placeholder {
     text-align: left;
@@ -166,6 +141,40 @@ section {
     border: 1px solid #000;
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: center;/
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+button {
+    background-color: #030303;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error-message{
+    color: brown;
+}
 
 @media (max-width: 991px) {
     .registration-form {
@@ -177,12 +186,30 @@ section {
     .registration-form input[type="number"],
     .registration-form input[type="file"],
     .registration-form input[type="submit"],
+    .registration-form input[type="email"],
+    .registration-form input[type="tel"],
     .registration-form input[type="date"] {
         font-size: 45px;
         margin-bottom: 10px;
         margin-left: 20px;
         margin-right: 20px;
     }
+
+    .registration-form input[type="radio"]{
+        width: 50px;
+        height: 50px;
+
+    }
+
+    input[type="checkbox"]{
+        width: 40px;
+        height: 40px;
+    }
+
+    label, p{
+        font-size: 45px;
+    }
+
 
     h2{
         font-size: 3.5rem;
@@ -195,6 +222,34 @@ section {
     .navigation a {
         margin: 0.5rem 0;
         font-size: 3.5rem;
+    }
+
+    .error-message{
+        font-size: 45px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    button {
+        width: 250px;
+        height: 80px;
+        font-size: 30px;
+    }
+
+    th, td {
+        padding: 8px;
+        border: 1px solid #ccc;
+    }
+
+    table {
+        width: 3000px;
+        font-size: 50px;
+    }
+
+    .container {
+        width: 1200px;
+        overflow: scroll;
     }
 
 }

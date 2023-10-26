@@ -19,25 +19,89 @@
 </header>
 <h2>Registration</h2>
 <div class="registration-form">
-    <form action="index.html" method="POST">
-        <datalist id="kind-sport">
-            <option value="Football"></option>
-            <option value="Volleyball"></option>
-            <option value="Basketball"></option>
-            <option value="Hockey"></option>
-            <option value="Athletics"></option>
-        </datalist>
 
-        <input type="text" name="enter email" placeholder="Email">
-        <input type="text" name="enter name" placeholder="Name">
-        <input type="text" name="enter last name" placeholder="Last name">
-        <input type="text" name="enter patronymic" placeholder="Patronymic">
-        <input type="date" name="enter birthday" placeholder="Birthday">
-        <input type="number" name="age" placeholder="Age">
-        <input type="text" name="sport" list="kind-sport" placeholder="Kind of sport">
-        <input type="file" id="file" name="file" accept=".pdf, .doc, .docx">
-        <input type="submit" value="REGISTER">
-    </form>
+    <datalist id="kind-sport">
+        <option value="Football"></option>
+        <option value="Volleyball"></option>
+        <option value="Basketball"></option>
+        <option value="Hockey"></option>
+        <option value="Athletics"></option>
+    </datalist>
+
+
+    <div class="field">
+        <input type="text" id="name" placeholder="Name" oninput="checkInput()">
+        <div class="error-message"></div>
+    </div>
+    <div class="field">
+        <input type="text" id="lastName" placeholder="Last name" oninput="checkInput()">
+        <div class="error-message"></div>
+    </div>
+    <div class="field">
+        <input type="text" id="patronymic" placeholder="Patronymic" oninput="checkInput()">
+        <div class="error-message"></div>
+    </div>
+    <div class="field">
+        <input type="date" id="birthday" min="1923-01-01" max="2016-01-01" placeholder="Day" oninput="checkInput()">
+        <div class="error-message"></div>
+    </div>
+    <div class="field">
+        <input type="number" id="age" placeholder="Age" oninput="checkInput()">
+        <div class="error-message"></div>
+    </div>
+    <div class="field">
+        <input type="text" id="email" placeholder="Email" oninput="checkInput()">
+        <div class="error-message"></div>
+    </div>
+    <div class="field">
+        <input type="text" id="sport" list="kind-sport" placeholder="Kind of sport" oninput="checkInput()">
+        <div class="error-message"></div>
+    </div>
+    <div class="field">
+        <p>Enter a phone:</p>
+        <input type="tel" id="phone" placeholder="+38(0__) -___-__-__" class="phone" oninput="checkInput()">
+        <div class="error-message"></div>
+    </div>
+    <div class="field">
+        <p>Choose Gender:</p>
+        <input type="radio" name="gender" value="male" id="male" oninput="checkInput()">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" value="female" id="female" oninput="checkInput()">
+        <label for="female">Female</label>
+        <input type="radio" name="gender" value="other" id="other" oninput="checkInput()">
+        <label for="other">Other</label>
+        <div class="error-message"></div>
+    </div>
+    <div class="field">
+        <input type="file" id="file" accept=".pdf, .doc, .docx" oninput="checkInput()">
+        <div class="error-message"></div>
+    </div>
+    <button id="registerButton" disabled onclick="createRow()">REGISTER</button>
 </div>
+
+<div class="container">
+    <table id="tableUsers" class="table-users-data">
+        <tr>
+            <th>Name</th>
+            <th>Last name</th>
+            <th>Patronymic</th>
+            <th>Birthday</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Kind of sport</th>
+            <th>Phone</th>
+            <th>Gender</th>
+            <th>Checkbox</th>
+        </tr>
+    </table>
+</div>
+<br>
+<button id="deleteRows" onclick="deleteRows()">DELETE</button><br>
+<button id="duplicateRows" onclick="dublicateRow()">DUPLICATE</button>
+
+<script src="js/validate.js"></script>
+<script src="https://unpkg.com/imask"></script>
+<script src="js/register.js"></script>
+<script src="js/phone.js"></script>
 </body>
 </html>
